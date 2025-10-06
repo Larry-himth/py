@@ -12,7 +12,7 @@ from sklearn.linear_model import LinearRegression
 import math
 
 def predict_using_sklean():
-    df = pd.read_csv("test_scores.csv")
+    df = pd.read_csv("py/ML/3_gradient_descent/Exercise/test_scores.csv")
     r = LinearRegression()
     r.fit(df[['math']],df.cs)
     return r.coef_, r.intercept_
@@ -41,7 +41,7 @@ def gradient_descent(x,y):
     return m_curr, b_curr
 
 if __name__ == "__main__":
-    df = pd.read_csv("test_scores.csv")
+    df = pd.read_csv("py/ML/3_gradient_descent/Exercise/test_scores.csv")
     x = np.array(df.math)
     y = np.array(df.cs)
 
